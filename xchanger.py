@@ -30,18 +30,6 @@ def append_to_csv(fileName, data):
     allParticipants, filteredParticipants, rejectedParticipants:
     EMAIL TIMESTAMP, PROCESSED TIMESTAMP, PARTICIPANT EMAIL, TELEPHONE NUMBER,
     IP, COUNTRY, DATA FROM, TX HASH, TAELIUM ADDRESS, FORM SUBMITTED ON
-
-    ethTxSuccess
-    TX HASH, VERIFICATION TIMESTAMP
-
-    ethTxFailure
-    TX HASH, FAILURE TIMESTAMP
-
-    taeliumSuccess
-    TAELIUM TX ID, TAELIUM BLOCK ID, TAELIUM BLOCK HEIGHT, ETH TX HASH, PARTICIPANT EMAIL, TAELIUM TIMESTAMP
-
-    taeliumFailure
-    ETH TX HASH, PARTICIPANT EMAIL, PROCESSING TIMESTAMP, ERROR
     '''
 
 def checkRepeatTxHash(txHash):
