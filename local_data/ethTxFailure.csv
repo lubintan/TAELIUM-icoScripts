@@ -1,1 +1,6 @@
-TX HASH, FAILURE TIMESTAMP
+TX HASH, FAILURE TIMESTAMP, ERROR MSG, PARTICIPANT EMAIL
+sumthin,2018-Mar-09 16:03:03.956,Tx not found.,ludawg@dawghouse.com,somethingz
+awfawfewefwefwaefewfwefwaefwefwefweafwefewfewafwefweafewafwafwfwaf,2018-Mar-09 16:03:04.785,Tx not found.,taelium.official@gmail.com,segersgergesgsergsegegseg
+sahv;oaihvoidhnvloivnlownvloewnglowahglowehgloweanhglowhgnlowehglo,2018-Mar-09 16:03:05.549,Tx not found.,artwong86@gmail.com,1234657894651234657894685
+awupfijwa'ifjerjaaaaaaaaajarjaerjaerjarjeajeajajajajajajajajajslrl,2018-Mar-09 16:03:06.635,Tx not found.,john.rake@outlook.com,hhhhhhhhhhhhhhhhhhhhhhhhh
+0x39d502d93c73373e82f76a60deaafc31a626aea34bf1db5af4fc76461fc8cd42,2018-Mar-09 16:03:07.551,Eth amount is zero.,abc@abcd.efg,blahblah
