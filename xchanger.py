@@ -1,10 +1,19 @@
-#!/usr/bin/env python
-#
-# Very basic example of using Python and IMAP to iterate over emails in a
-# gmail folder/label.  This code is released into the public domain.
-#
-# RKI July 2013
-# http://www.voidynullness.net/blog/2013/07/25/gmail-email-with-python-via-imap/
+
+
+#########################################
+##### THINGS TO CHANGE!!!!!! ############
+
+# Contract address
+# TAELS_PER_ETH (in both txhashvalidator and taelsender)
+# PORT
+
+#########################################
+#########################################
+#########################################
+
+
+
+
 #
 import sys, os
 import glob, os
@@ -27,7 +36,7 @@ REJECTED_PARTICIPANTS = 'rejectedParticipants'
 FILTERED_PARTICIPANTS = 'filteredParticipants'
 ROLLOVER_IDENTIFIER = 'I want my contribution to be applied to the ICO instead of being refunded.'
 
-POLLING_INTERVAL = 600
+POLLING_INTERVAL = 60
 
 ALL_PARTS_HEADER = ['EMAIL TIMESTAMP', 'PROCESSED TIMESTAMP', 'PARTICIPANT EMAIL',
                     'TELEPHONE NUMBER', 'IP', 'COUNTRY', 'DATA FROM', 'TX HASH', 'TAELIUM ADDRESS',
@@ -158,8 +167,7 @@ def process_mailbox(M, current_timestamp):
                         text = each.split(':')
                         if text[0] == 'Email address':
                             participant_email = text[1].strip()
-                        elif text[0] == 'Telephone number':
-                            telephone_number = text[1].strip()
+
                         elif text[0] == 'IP of the user':
                             ip = text[1].strip()
                         elif text[0] == 'Country':
@@ -171,13 +179,15 @@ def process_mailbox(M, current_timestamp):
                         elif text[0] == 'Taelium address':
                             taelium_address = text[1].strip()
                         elif text[0] == 'Form submitted on':
-                            form_submitted_on = text[1].strip()
-                        elif text[0] == 'Rollover':
-                            rollover = text[1].strip()
-                            if ROLLOVER_IDENTIFIER in rollover:
-                                rolloverBool = 'Yes'
-                            else:
-                                rolloverBool = 'No'
+                            form_submitted_on = text[1].strip() + ':' + text[2].strip()
+                        # elif text[0] == 'Rollover':
+                        #     rollover = text[1].strip()
+                        #     if ROLLOVER_IDENTIFIER in rollover:
+                        #         rolloverBool = 'Yes'
+                        #     else:
+                        #         rolloverBool = 'No'
+                        rolloverBool = "NA"
+                        telephone_number = "NA"
 
             try:
                 csvData = [email_timestamp, processed_timestamp, participant_email, telephone_number, ip, country, data_from, tx_hash, taelium_address, form_submitted_on, rolloverBool]
